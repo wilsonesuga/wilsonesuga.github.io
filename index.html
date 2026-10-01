@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wilson Kevin Esuga | Laboratory Technologist and Writer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Literata:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{
+  --bg:#17141A;--ink:#EDE6E3;--muted:#ABA0A4;--line:#3B2F37;--accent:#E0708A;--warm:#D9A66B;--card:#231C24;color-scheme:dark;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17141A;--ink:#EDE6E3;--muted:#ABA0A4;--line:#3B2F37;--accent:#E0708A;--warm:#D9A66B;--card:#231C24;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17141A;--ink:#EDE6E3;--muted:#ABA0A4;--line:#3B2F37;--accent:#E0708A;--warm:#D9A66B;--card:#231C24;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+:root[data-theme="light"]{--bg:#F6EFE8;--ink:#2A1B22;--muted:#6E5A62;--line:#DCCBC3;--accent:#8E2A45;--warm:#8A5A12;--card:#EDE1D8;color-scheme:light}
+#themeBtn{position:fixed;top:calc(env(safe-area-inset-top,0px) + .75rem);right:.75rem;z-index:10;padding:.4rem .9rem;border:1.5px solid var(--line);border-radius:99px;background:var(--card);color:var(--ink);font:600 .85rem "Bricolage Grotesque",sans-serif;cursor:pointer}
+#themeBtn:focus-visible{outline:3px solid var(--warm);outline-offset:3px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.7 "Literata",Georgia,serif}
+main{max-width:860px;margin:0 auto;padding:0 1.25rem 4rem}
+h1,h2,h3{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;line-height:1.05;margin:0}
+.hero{padding:4.5rem 0 3rem;border-bottom:2px solid var(--ink)}
+h1{font-size:clamp(3rem,13vw,7rem);font-weight:800;letter-spacing:-.03em}
+.hero .sub{margin:1.5rem 0 0;max-width:34rem;font-size:1.2rem}
+.split{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem}
+.tag{padding:.3rem .8rem;border:1.5px solid var(--accent);color:var(--accent);border-radius:99px;font:500 .9rem "Bricolage Grotesque",sans-serif}
+.tag.w{border-color:var(--warm);color:var(--warm)}
+section{padding:2.75rem 0;border-bottom:1px solid var(--line)}
+h2{font-size:1.9rem;font-weight:700;margin-bottom:1.5rem}
+.job{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:1rem 0}
+.job time{font:500 .95rem "Bricolage Grotesque",sans-serif;color:var(--muted);padding-top:.25rem}
+h3{font-size:1.25rem;font-weight:700}
+.job p{margin:.35rem 0 0;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.skills div{background:var(--card);padding:1.1rem 1.2rem;border-left:4px solid #8E2A45}
+.skills div.w{border-left-color:var(--warm)}
+.skills b{font-family:"Bricolage Grotesque",sans-serif}
+.work{border:2px dashed var(--line);padding:1.5rem;color:var(--muted)}
+.contact a{color:var(--accent);font-weight:600;word-break:break-all}
+.contact p{margin:.4rem 0}
+a:focus-visible{outline:3px solid var(--warm);outline-offset:3px}
+footer{padding-top:2rem;color:var(--muted);font-size:.9rem}
+.piece{padding:1.25rem 0;border-top:1px solid var(--line)}
+.piece:first-of-type{border-top:0}
+.piece .kind{font:500 .9rem "Bricolage Grotesque",sans-serif;color:var(--warm)}
+.piece p{margin:.4rem 0 0}
+.piece .teaser{font-style:italic;color:var(--muted)}
+details{margin-top:.6rem}
+summary{cursor:pointer;font:600 .95rem "Bricolage Grotesque",sans-serif;color:var(--accent)}
+summary:focus-visible{outline:3px solid var(--warm);outline-offset:3px}
+.poem{white-space:pre-line;margin:.8rem 0 0;padding-left:1rem;border-left:3px solid #8E2A45;max-width:34rem}
+.read,.back{display:inline-block;font:600 .95rem "Bricolage Grotesque",sans-serif;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.read:focus-visible,.back:focus-visible{outline:3px solid var(--warm);outline-offset:3px}
+.reader{padding:2.5rem 0 3rem}
+.reader .kind{display:block;margin-top:1.5rem;font:500 .9rem "Bricolage Grotesque",sans-serif;color:var(--warm)}
+.reader h2{font-size:clamp(1.9rem,7vw,3rem);margin:.3rem 0 1.5rem}
+.reader .text{max-width:36rem;margin-bottom:2rem}
+.reader .text p{margin:0 0 1rem}
+.reader .text p.brk{text-align:center;color:var(--muted);letter-spacing:.3em;margin:1.5rem 0}
+[hidden]{display:none!important}
+@media (max-width:560px){.job{grid-template-columns:1fr;gap:.2rem}}
+</style>
+</head>
+<body>
+<button id="themeBtn" type="button" aria-label="Switch between dark and light mode">Light mode</button>
+<main>
+<div id="portfolio">
+<header class="hero">
+  <h1>Wilson Kevin Esuga</h1>
+  <p class="sub">Writer, animator and illustrator. I write fiction, poetry and articles, and I work as a laboratory technologist.</p>
+  <div class="split"><span class="tag">Writing</span><span class="tag">Animation</span><span class="tag">Illustration</span><span class="tag w">Laboratory work</span></div>
+</header>
+
+<section id="writing">
+  <h2>Selected writing</h2>
+  <div class="piece">
+    <span class="kind">Novel chapter</span>
+    <h3>I Death, You Rebirth: Chapter 6</h3>
+    <p>A flashback to four years earlier. A teacher has flogged Caleb, and his sibling steps in to confront him.</p>
+    <p class="teaser">"Did he tell you what he did?!" Mr. Balogun said angrily. "Eh?!"</p>
+    <p><a class="read" href="#read-chapter6">Read the full chapter</a></p>
+  </div>
+  <div class="piece">
+    <span class="kind">Novel chapter</span>
+    <h3>The Panther</h3>
+    <p>Two months after their wedding, Ravea recalls a wedding night that went comically wrong after a borrowed aphrodisiac.</p>
+    <p class="teaser">Married life had drastically changed Ravea and Jerome.</p>
+    <p><a class="read" href="#read-panther">Read the full chapter</a></p>
+  </div>
+  <div class="piece">
+    <span class="kind">Article</span>
+    <h3>Walking for rewards with Sweatcoin</h3>
+    <p>A plain-language explainer of the step-counting app: how steps turn into coins, what they can buy, and what the app does not do.</p>
+    <p><a class="read" href="#read-article">Read the full article</a></p>
+  </div>
+  <div class="piece">
+    <span class="kind">Short story</span>
+    <h3>Der Verlorene Engel</h3>
+    <p>Anna works at a wartime inn in Leipzig, hiding who she is. An SS officer who loves her keeps her safe, until the war and a jealous colleague close in.</p>
+    <p class="teaser">The war was moving fast.</p>
+    <p><a class="read" href="#read-story">Read the full story</a></p>
+  </div>
+  <div class="piece">
+    <span class="kind">Poem</span>
+    <h3>The Questions that Cripple my Becoming</h3>
+    <details><summary>Read the poem</summary>
+<div class="poem">You, me.
+Is this comfort I feel?
+It permeates through me—scarily so.
+I want more, yearn for more, need more.
+But I don’t know where to place this hunger—
+on your lips,
+on your silence,
+or on the space you leave when you go.
+
+The space.
+Do you want me in your space?
+Do you want to be in mine?
+I’m stricken with uncertainty.
+Crippled by the possibilities I imagine.
+Oh, pessimistic me.
+Does he bring you comfort too?
+
+Do I linger in your mind, like you do in mine?
+Do I flicker through your thoughts like candlelight?
+You are a bonfire to me—you might know.
+Your essence, sustenance beyond warmth.
+Your brilliance, a wave I long to ride.
+If only you knew.
+Do you?
+
+I do.
+Hence my hunger to live.
+To be roused by the kindling of your laughter,
+Satiated by the radiance of your smile.
+And still, I wait in the silence between our spaces,
+Hoping yours calls out to mine.</div></details>
+  </div>
+  <div class="piece">
+    <span class="kind">Poem</span>
+    <h3>The Gravity of Her Silence</h3>
+    <details><summary>Read the poem</summary>
+<div class="poem">She is weightless gravity,
+The stillness in a world that moves too fast.
+A gentle breeze beneath my storms,
+The ache I reach for when I want to feel whole.
+
+Her smile—
+Radiant and purifying, yet soothing and cool.
+It calms the parts of me I didn't know were trembling.
+And when I'm bathed in the melodies of her laughter,
+It's an ointment that washes the stains in my soul.
+
+There are moments—
+Her eyes meet mine,
+Time fading into stillness.
+She says nothing,
+And I hear all that I've been yearning to be told.
+
+In her absence,
+I crawl through days like fading echoes,
+Scents left behind by someone far away.
+It's not grief. Not entirely.
+Just the feeling that gravity forgot me for a while.
+And I miss the weight
+Of her simply being.
+
+She is to you a shadow,
+But to me,
+She is You.</div></details>
+  </div>
+  <div class="piece">
+    <span class="kind">Poem</span>
+    <h3>My Yearning</h3>
+    <details><summary>Read the poem</summary>
+<div class="poem">The sight of you entrances me,
+Such splendor, grandeur, ethereal light.
+A dream, a wish, yet never free,
+I’m lost in you, a helpless plight.
+
+Let me touch you, to know what’s real,
+No thought or dream could do you right.
+I crave your warmth, your grace to feel,
+Or I shall never rest at night.
+
+Oh! That smile! That laugh divine,
+A melody too pure to tame.
+How few are blessed to hear a sound so fine,
+Yet still, you say words that bring me pain.</div></details>
+  </div>
+</section>
+
+<section>
+  <h2>What I bring</h2>
+  <div class="skills">
+    <div><b>Fiction</b><br>Novel chapters and short stories.</div>
+    <div><b>Poetry</b><br>Free verse and rhymed poems.</div>
+    <div><b>Article writing</b><br>Plain-language explainers for general readers.</div>
+    <div class="w"><b>Animation and illustration</b><br>Graphic illustration and animated visuals.</div>
+    <div class="w"><b>Laboratory practice</b><br>Hands-on work in a working environmental lab.</div>
+    <div class="w"><b>Customer service</b><br>Two years dealing with customers directly.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <div class="job"><time>2025 to now</time><div><h3>Laboratory Assistant, Jomick Environmental Services</h3><p>Started with a one-year internship in 2025 and stayed on as a laboratory assistant at this private lab.</p></div></div>
+  <div class="job"><time>2021 to 2023</time><div><h3>Customer Service Representative and Typist, Amek Computers</h3><p>Two years at a private sales firm, serving customers and handling typing work.</p></div></div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="job"><time>B.Tech</time><div><h3>Biochemistry and Chemistry Technology</h3><p>University of Port Harcourt</p></div></div>
+</section>
+
+<section class="contact" style="border-bottom:0">
+  <h2>Get in touch</h2>
+  <p>Email: <a href="mailto:wk2005821@gmail.com">wk2005821@gmail.com</a></p>
+  <p>Phone: <a href="tel:+2349023594667">09023594667</a></p>
+  <p>LinkedIn: <a href="https://ng.linkedin.com/in/wilson-kevin-6812a0285" rel="noopener">Wilson Kevin</a></p>
+  <p>X: <a href="https://x.com/hethatis_kevin" rel="noopener">@hethatis_kevin</a></p>
+</section>
+<footer>Wilson Kevin Esuga</footer>
+</div>
+<section class="reader" id="read-chapter6" hidden>
+  <a class="back" href="#writing">Back to portfolio</a>
+  <span class="kind">Novel chapter</span>
+  <h2>I Death, You Rebirth: Chapter 6</h2>
+  <div class="text">
+<p>ABOUT 4 YEARS EARLIER</p>
+<p>"Did he tell you what he did?!" Mr. Balogun, a tall, chubby man with folds of fat for a neck said angrily. "Eh?!"</p>
+<p>I looked at Caleb curiously and realized that I'd forgotten to ask him what he did to deserve the numerous strokes of bright pink bruises caused by merciless flogging on his faintly fair skin, then I realized why I didn't bother to ask. "Whatever it is he did sir, flogging him like this was highly unwarranted!"</p>
+<p>"Who are you to tell me what is warranted and what is unwarranted? I'm your teacher! My job is to teach you! Not just academically, but morally! And one way of doing that is," He motioned towards Caleb who was standing beside me. One of his eyes were swollen, so were his cheeks, and the pink strokes on his body looked like they'd start bleeding anytime soon. "Or are you saying that your brother is above punishment?"</p>
+<p>"I'm saying that this isn't punishment sir." My voice was sharp with anger.</p>
+<p>"Then it's what?" The 6ft tall man took a step closer to me and his towering physique blocked the sunglight from my view, submerging me into his shadow. I loved eclipses but this one wasn't as beautiful as the others I'd experienced.</p>
+<p>Nevertheless, I wasn't going to be intimidated out of speaking my mind, "It's physical abus…" But he immediately slapped the words right out of my mouth.</p>
+<p>"Mind your mouth. Your brother slapped a girl, that's payback," he said. "Now get out of my sight."</p>
+<p><em>You sniveling piss of dog shit! </em>I gritted my teeth and walked away, pulling Caleb along with me.</p>
+<p>When we were a reasonable distance away, "I told you not to do anything, didn't I?" Caleb said. His words sounded a bit loose, probably because of his swollen cheek. "He's a teacher, you can't fight him." He suddenly sighed, "And it's not like you can even fight."</p>
+<p>"And so? Should I have just seen all these injuries on your body and chose to ignore them?" I was still furious.</p>
+<p>"No, you should've seen the injuries, told me sorry like you usually do, and then made tea and bread for me. That was the main reason I even came to your dorm room, if I wanted to take revenge on the man I'd have gone to meet Raymond." He gently rubbed one of the pink strokes on his arm as little drops of blood began seeping through.</p>
+<p>"Stop rubbing it," I mumbled as I pulled his hand away from the now bleeding injury.</p>
+<p>"It's not that painful anymore." He pressed his swollen cheek a bit and winced.</p>
+<p>"Stop it!" I pulled his other arm away from his face. "Why would you even slap a girl?! Boys are not supposed to do that."</p>
+<p>"She insulted you…" he said, but I didn't care much, "...Raymond…" I was getting concerned, "...and Daddy."</p>
+<p>"Eh? Daddy?" I asked, quite curiously, "What did she say?"</p>
+<p>His head hung low as he slowly came to a halt. "She called him a 'Cabu Cabu Driver'."</p>
+<p>"Oh," I sighed, a bit sadly. "It's not like she's wrong though."</p>
+<p>"What are you saying?! Of course she is! He's a Taxi Driver." He pronounced the word 'taxi' with an eloquent diction that gave the job title a lot more respect than it was appropriated in real life.</p>
+<p>"What's the difference?"</p>
+<p>Caleb got mad. "The difference is that she has no respect for the job! She doesn't know how hard and dangerous it is! All because her father works in a stupid bottling company!" His eyes were getting moist. "If her father didn't have a car, it'd be people like Daddy that he'll be depending on to go out every single day!" Tears rolled down his cheeks, "And sometimes even on Sunday."</p>
+<p>I suddenly felt guilty for questioning his motives, so I hugged him and apologized.</p>
+<p>PRESENT DAY</p>
+<p>Hanging tightly unto the guardrail for support, my throat instantly felt sore the second I heard myself scream, "Caleb!!!"</p>
+<p>Lost in thought, he had been pushed to the ground by the multitude of students that were racing away from the armed men. He tried getting up but I was sure I felt my heart bleed a little when I saw the look on his face after realizing that he had twisted his ankle.</p>
+<p>I was 3 stories up but somehow I was positive that I could leap over the guardrail and make it in time to help my brother up, so I immediately climbed unto the guardrail with full intent to jump when I felt someone grab my waist and pull me back.</p>
+<p>"What do you think you're doing?!" Still holding me, Sochima asked in shock.</p>
+<p>"Caleb! Caleb is down there!" I replied, crazed.</p>
+<p>"What?!" He immediately let go off me and rushed to the guardrail. "Oh my God. Caleb run!"</p>
+<p>One of the armed men looked up and fired at us. We immediately crouched down and covered our ears as the sound of windowpanes breaking caused us to hurdle together in panic. Seconds later, the sounds of both the gunshots and the breaking glass suddenly stopped. I wanted to get up immediately but Sochima held me down. "They might be waiting for us," he whispered to me over the sound of the rampaging students. "Let's go to the floor below and check from there, they won't be expecting it."</p>
+<p>I was too dazed to oppose his suggestion. I simply followed behind him as we headed to the lower floor, both of us still crouching.</p>
+<p>My mind began to unravel when I saw a boy lying motionless on the floor with his uniform soaked in blood. Although, there weren't any bullet holes in his body. <em>Maybe he's still alive!</em> I thought optimistically and approached him, but once again, Sochima pulled me back. "He's dead," he said plainly, his face lacking any form of sympathy, grief or emotion of the sort. It was plain, too plain.</p>
+<p>"What do you mean?! There aren't any bullet holes on his body, look!" I managed to protest this time.</p>
+<p>He pulled me closer and pointed at a gaping hole in the boy's head. "He died from a fall, not a gunshot."</p>
+<p>This time my stomach unraveled and I threw up the previous night's dinner. "How?" I managed to ask after getting a hold of myself.</p>
+<p>"Most probably the riot," he said dimly, then pulled me again. "Let's go."</p>
+<p>We arrived at the second floor and decided to try our luck once again, but looking over the guardrail this time, the amount of bodies had nearly tripled. I anxiously searched for Caleb amongst the bodies laying on the ground and was instantly relieved when I couldn't find him.</p>
+<p>"Someone probably helped him!" I said gleefully. Sochima simply nodded. "So where to now? The men are probably already inside the building."</p>
+<p>We both looked around to access the state of things around us.</p>
+<p>Somehow, most of the students had felt the best course of action was to leave through the school's back gate. "What're they doing?" I asked rhetorically. "What if they get shot?"</p>
+<p>"Leaving the school is probably the best option at this point but if those men actually planned on massacring all of us, it's safe to say that they know about the back gate and have already made plans to handle it," Sochima replied calmly, although this time I could hear the tension beneath his voice.</p>
+<p>"I wonder if Caleb made it out safely though."</p>
+<p>"If you want to make it out of here alive, you have to stay focused and worry about yourself first before worrying about Caleb's whereabouts." Sochima sounded so cold and insensitive, it scared me. But It was even more terrifying how easily I was able to come to terms with what he said.</p>
+<p>"I have a plan," I said to Sochima after much analyzing and pondering.</p>
+<p>He didn't look surprised. "I'm listening."</p>
+<p>"You said there was a chance that these men plan on massacring all of us, right?"</p>
+<p>"Right."</p>
+<p>"Okay well, firstly we have to find out if it's a probability or a fact. That'll determine what we're going to do next," I said hastily.</p>
+<p>"And how do you suppose we do that?"</p>
+<p>"We wait. So far we haven't heard any gunshots coming from the direction of the back gate so we can assume that the men that entered through the front gate are probably all there is to their group. Which means that to get to the back gate, they'll have to inspect the main school building before moving on to the back gate, leaving the front gate-"</p>
+<p>"Completely unattended to."</p>
+<p>"Exactly. And with how big the main school building is, they won't split up so that they can cover more ground in less time. I'm sure someone has notified the police by now, which means they won't want to stay till they get here." I sped through my plan confidently, and Sochima was quick on the uptake. "If things go as I just said, then we'll be sure that they plan on killing us all, in which case, we'll race for the front gate once we're sure they've left for the back gate."</p>
+<p>"And if they don't?"</p>
+<p>"Then we just wait till the police get here." I heard the stupidity in what I had just said but when Sochima didn't protest against it, I began to believe that although incredibly risky, it was actually a pretty good idea.</p>
+<p>"So where do you suggest we hide?"</p>
+<p>"I was kind of hoping you'd have an idea."</p>
+<p>Sochima sighed and began to scratch his head. Suddenly he gasped, dipped his hand into his right pocket and pulled out a bunch of keys.</p>
+<p>"Who's keys are…"</p>
+<p>"The principal's!" Sochima answered before I was done asking. "He asked me to return a bunch of books to his office before this whole thing started and I was on my way to return the keys to him when I saw you about to kill yourself."</p>
+<p>"I wasn't…"</p>
+<p>"Yeah sure. Come with me."</p>
+<p>We stealthily hurried to the Principal's office. Luckily it was on the second floor, so we didn't have to cover much distance. Nevertheless, the distance seemed incredibly long and neverending, mostly because of the bodies we came across on our way there.</p>
+<p>"I thought they escaped," I said under my breath. "Why are there so many?"</p>
+<p>"I guess not everyone was lucky," Sochima said. "Panicking the way we did was probably the worst mistake we made."</p>
+<p>"But it couldn't be helped, we were being shot at."</p>
+<p>"It doesn't matter now Milton," Sochima looked me dead in the eye, then looked away as his eyes grew moist. "They're dead now."</p>
+<p><em>They're dead, </em>I thought to myself as I looked around. Just then, I thought I saw one of the bodies move, then I heard it talk. "Help me, please," a small feminine voice trailed past my ear.</p>
+<p>"Where are you?!" I asked immediately.</p>
+<p>"Here." I saw a hand slightly raised up. I hurried over and grabbed it, then turned the girl over. "Umph!" I grunted as I tried lifting her up. Her large voluminous statue was a stark juxtaposition of her small voice.</p>
+<p>"Milton what're you doing?" Sochima asked, a bit alarmed.</p>
+<p>"They're not all dead!" I replied immediately. "She's injured," I looked at her broken leg then back at Sochima. "We have to help her."</p>
+<p>"No! We can't help anyone right now! We'll leave that to the police for when they get here. For now, we need to get to the principal's office."</p>
+<p>"No no no no, please don't leave me here." The girl held my arm tightly.</p>
+<p>I looked at her assuringly. "We won't," I said then tried helping her off the floor, but I wasn't strong enough so I turned to Sochima for help, but he didn't look like he had any plans to do so. "Sochima please," I pleaded.</p>
+<p>"Aaargh!" Irritated, he sighed loudly. "Okay, whatever, let's just do it quickly." He grabbed her left hand and together we pulled her up.</p>
+<p>As expected, when we arrived, the principal's office was locked. Sochima quickly opened the door and we rushed in. I helped the girl lay down on a couch in the office, then moved behind his desk and slumped into his chair. "Now we just have to wait and see what happens."</p>
+<p>"Yeah," Sochima replied. "Hopefully it doesn't take too long, I'm really thirsty."</p>
+<p>"Me too," the girl moaned.</p>
+<p>Sochima looked at her and sighed, "What's your name?"</p>
+<p>"Success," she replied.</p>
+<p>"What class are you?"</p>
+<p>"SS2."</p>
+<p>"You're in my brother's class!" I asked immediately. "Do you know where he is? Have you seen him?"</p>
+<p>"No, sorry." She actually looked sorry. "But the last time I saw him, he was running away from those people."</p>
+<p>The unexpected information made me anxious yet quite relieved. I think Sochima noticed this and quickly tried to change the topic. "Milton, check if you'll see any water there please."</p>
+<p>There was a large bottle of water beside the principal's chair. "Yeah, there is," I said. On his table was a coffee mug. I poured some water into it then gave the rest of the water to Sochima. Still overcome by anxiety, my hands grew unsteady as I tried to lift the mug off the table, causing some of the water to spill on some documents. "Crap!" I said under my breath.</p>
+<p>The papers absorbed the water pretty quickly, and unsurprisingly, blowing on them didn't help much in drying them. I decided to separate the papers so they could dry faster. While arranging them on the table, I noticed something on one of the documents.</p>
+<p>"Uhm, do you guys know the principal's full name?" I asked.</p>
+<p>"Why would I want to know that?" Sochima relaxed on a chair with his eyes shut.</p>
+<p>"I don't know, I think it's just proper."</p>
+<p>He opened his eyes "You, do you know?"</p>
+<p>I pouted a little bit. "I think I do now." I looked at Success, "Do you know his full name?" She shook her head.</p>
+<p>"Why are you asking us if you already know?" Sochima shut his eyes back.</p>
+<p>"I just want to confirm something," I said, then held up a document. "According to this, his name is Yusuf Abdullah."</p>
+<p>"Meaning?"</p>
+<p>"The man is a Muslim."</p>
+<p>Sochima looked disappointed, "Ah Milton, since when did you start stereotyping muslims?"</p>
+<p>"No no no, that's not what I'm getting at," I defended myself. It'd have been highly hypocritical of me to do something like that after passionately criticizing Patrick for doing same. "Well at least not completely."</p>
+<p>"So what are you getting at then?" Sochima asked.</p>
+<p>"He means the principal might be in on everything happening in the school right now," Success explained out of the blue.</p>
+<p>Sochima looked at her in shock, then looked back at me. "Seriously?!"</p>
+<p>"It's just a theory." I had no plans of saying it straightforwardly. "When last did you see him?"</p>
+<p>"Downstairs, a couple minutes before the men arrived. He was about entering his car when he saw me and gave me the documents," Sochima's face grew worried, "Now that I think about it, he looked like he was in a hurry to leave."</p>
+<p>Success was shocked, "So does that really mean he…"</p>
+<p>"It doesn't mean anything!" Sochima stopped her from saying any more. "His name isn't proof of anything, and we don't know anything. Alright?" She nodded her head. I replied, "Yeah."</p>
+<p>"Achoo!" Success suddenly sneezed.</p>
+<p>"Bless you," I said while rummaging through the principal's document.</p>
+<p>"Atishoo!!" Sochima sneezed as well.</p>
+<p>"Bless you," I said to him, then I too sneezed. "Achoo!"</p>
+<p>"Bless you," Success said to me then started coughing. At first it was light, but then it quickly became scarily deep. Sochima quickly gave her the water.</p>
+<p>"Are you okay?" I asked. My throat felt dry and charred.</p>
+<p>"No," she replied, amidst a serious cough.</p>
+<p>Sochima started coughing as well. "I can't breathe. Milton, open the window."</p>
+<p>I rushed over to the window and opened it. Suddenly, a gust of hot air rushed out from behind me while cool air rushed in. I was shocked at how deeply I was gasping for air, then I turned around and looked back inside the office.</p>
+<p>"Smoke!" I shuddered.</p>
+<p>Sochima looked around in fright before rushing to the window closest to him and opening it. He gasped for air just like I did.</p>
+<p>Meanwhile, Success's cough had grown more serious. I hurried over and helped her off the couch and towards the window. She took a long deep breath before letting out one big final cough, and with it, mucus. "Excuse me," she said.</p>
+<p>"It's alright." I wanted to rub her back but quickly decided against it.</p>
+<p>The smoke was filling the office faster than fresh air was getting in and we probably all realized that we'd suffocate to death if we stayed there any longer.</p>
+<p>"We have to leave here now!" Sochima said.</p>
+<p>"Rat-a-tat-tat-tat-tat-tat-tat-tat," the sound of the guns going off started once again.</p>
+<p>"No! We can't!" Success opposed.</p>
+<p>"Would you rather we stayed here and suffocate to death?!" Sochima shot at her. "We have to leave!"</p>
+<p>"No! If we go out they'll shoot us to death!" She insisted.</p>
+<p>"Argh!" Sochima groaned in frustration. "Milton say something!"</p>
+<p>"I don't know what to say! The men are clearly trying to smoke us out by setting the building on fire, and even if we decide to keep hiding, we'll either suffocate to death or be burnt to ashes by the fire!"</p>
+<p><em>Oh God! I wasn't expecting this! The plan is completely ruined!</em></p>
+<p>"So your plan is basically obsolete then?" Sochima read my mind, despair slowly creeping across his face. I couldn't tell him the truth, but I felt like I needed to take responsibility for the plan and come up with another. But first, "Whatever the case, we can't stay here any longer," although anxious and confused, I began thinking of what to do next. "Depending on where they set the fire, the second floor is the last place we want to be. The floor could give way and we could fall to the bottom floor or, the ceiling could lose its integrity and the floors above us with everything on them could come crashing down on us. My point being.."</p>
+<p>"We need to get the hell out of here!!" Looking straight at Success, Sochima completed my sentence. She moaned sadly and gave up on opposing Sochima.</p>
+<p>I placed her arm around my shoulder, took a deep breath and rushed out of the office.</p>
+<p>"Where to?!" Sochima asked, agitated.</p>
+<p>"I don't know, we just have to get off this floor!"</p>
+<p>One of the classes suddenly collapsed in on itself. As we passed by, I could hear a faint sound of someone screaming. I slowed down a bit as I began to consider helping them. "They're already dead by now!" Success said. "Please just keep moving."</p>
+<p><em>What the hell?! </em>I thought in shock. <em>This girl is unbelievable! Minutes ago you were begging me to help you, but now you don't want to help someone else. </em></p>
+<p>Justly judgemental as I thought the thought was, I felt incredibly guilty for even thinking such in the first place, considering that deep down within me, I was oh so glad that she stopped me from going.</p>
+<p>"M-Milton," I heard my name, "Help me."</p>
+<p>I looked back in only to see a huge slab of concrete on top of Caleb. His lower body, his legs up till his lower abdomen, were buried beneath it. His right arm was on fire and his left was being held out towards me. "Mil-ton, please."</p>
+<p>My body grew limp as I immediately let go off Success and rushed to help Caleb. I tried lifting the concrete slab up but even if I had started lifting weights at around the same time I started walking, I'd probably still need about 20 clones of that version of myself before I'd even make the slab budge. My chest felt like the fire around me had somehow managed to get in and set it ablaze when it dawned on me that I couldn't help Caleb.</p>
+<p>"Leave him! Let's go!" Success cried from behind me.</p>
+<p>"Will you shut up already?! I can't just leave him like this!"</p>
+<p>"Why not?! There's nothing you can do to help him!"</p>
+<p><em>Why not? Why not?! </em>"What class did you say you were again?" I asked.</p>
+<p>"That doesn't matter! Let's just.."</p>
+<p>"Answer me!" I picked up a hot wooden stick and pointed it at her.</p>
+<p>"SS2! SS2!" She replied immediately.</p>
+<p>"SS2 what?"</p>
+<p>"Eh?"</p>
+<p>"SS2 what?!"</p>
+<p>"SS2 C!"</p>
+<p>I dropped the stick in shock. "You weren't in his class. Did you even know him?"</p>
+<p>"Kn-Know who?"</p>
+<p>"My brother!" I pointed at him, incredibly furious as tears rolled down my eyes.</p>
+<p>"O-Okay I'm sorry I lied, but I didn't want you guys to change your mind and leave me behind."</p>
+<p>"So you decided to lie about knowing my brother? In what way does that help you?"</p>
+<p>"I don't know, I'm sorry. I just felt like the less worried you were about him, the more likely you were of staying and helping me. I'm so sorry."</p>
+<p>I wanted to wipe the stick across her face, but the side of her head suddenly exploded spraying blood and brain matter on the ground and on me.</p>
+<p>"Check there!" A heavily accented voice said.</p>
+<p>My body suddenly fell into shock but my mind overrode it and threw me behind the huge concrete slab.</p>
+<p>"Just one! He's almost dead, I'll finish him off!" I heard another voice say, followed by a short, "Rat-a-tat-tat-tat!" Then he left.</p>
+  </div>
+  <a class="back" href="#writing">Back to portfolio</a>
+</section>
+<section class="reader" id="read-panther" hidden>
+  <a class="back" href="#writing">Back to portfolio</a>
+  <span class="kind">Novel chapter</span>
+  <h2>The Panther</h2>
+  <div class="text">
+<p>2 MONTHS LATER</p>
+<p>A wooden cottage stood elegantly in the middle of a field. Surrounded by a plethora of plants, flowers and occasional weeds, it seemed secluded from the world by mother nature.</p>
+<p>Out from the house stepped a dark, muscly man putting on a singlet, shorts and straw hat with a pickaxe in his hand. Walking not too far behind him was a chubby light skinned woman in a light pink dress with a slight bulge in her stomach. The man strolled off further into the field while the woman settled down on a wooden chair in front of the cottage. Married life had drastically changed Ravea and Jerome.</p>
+<p>Unlike before, Jerome now engaged in consistent manual labor, from cutting firewood to tilling the soil on their farm. His muscles had responded to the sudden change in lifestyle by a gradual increase in size overtime. Meanwhile, Ravea, lean as she was before marriage, was now comparable to the fattest women in the village. Although her pregnancy had a part to play in that aspect, everyone, including Ravea herself was shocked at how her body changed due to the pregnancy. Two months earlier, if anyone had told her she'd gain that much weight within a short period of time, she'd have punched them. But as she sat comfortably under the shade of a mango tree and thought back on her wedding night, she realized that her current state was to be expected.</p>
+<p>After realizing that she might not be able to enjoy a standard wedding night as per the norms and customs of society, she rushed to her mother to seek advice. Quiet as she was, Agnes was an expert on matters like that and Ravea was witness to it.</p>
+<p>She remembered one night, her father had come back home tired as a donkey due to an extended work session of harvesting crops from a client's land under the hot sun because of an ongoing financial strife in their family. Unluckily for him, her mother was in heat. She had been in heat all week but had managed to hold back herself so as not to drain what little life force her father had left. But that night she couldn't handle it any longer.</p>
+<p>Knowing fully well that her husband would say no to any sort of sensual activity that night, Agnes secretly went ahead to add an aphrodisiac to his food. Ravea had watched her do so. A few sprinkles here and there and a couple hours later, Mr. Semira was like a rabid horse high on ganja, or as the locals called it, the shrub of emotions. And her mother's voice echoed for hours through the house. A couple years later, when she was old enough to understand what happened that night, Ravea wondered how her mother escaped that night without getting pregnant.</p>
+<p>Agnes chuckled when Ravea told her about her predicament. "Don't worry, I came prepared", she whispered into Ravea's ear. Then unfolded a small knot in her wrapper and brought out a small bottle containing a black powder.</p>
+<p>"You never cease to amaze me", Ravea said in awe.</p>
+<p>"A pinch of this and he'll be a man once again." Agnes placed it in Ravea's hand and closed it.</p>
+<p>"Who carries an aphrodisiac around." Ravea wondered.</p>
+<p>Agnes noticed Ravea was lost in thought so she repeated herself, "Just a pinch okay? Two pinches if you want more fun but nothing more than that."</p>
+<p>Ravea nodded then got up and left. She was utterly surprised. This was the same woman that warned her not to stay too long around a man. Nevertheless, her wedding night was saved.</p>
+<p>When all was said and done, when the sun had gone to bed and left the moon on night shift, when the good evenings were being replaced by goodnights. The Dernewt and Semira families escorted the newly wedded couple to their new home. But Hilma and Agnes didn't want to stay too long as they both knew the newly wedded couple wanted some alone time together.</p>
+<p>20 minutes later, the house was evacuated and Ravea and Jerome lay hand in hand in bed. They both let out a sigh of relief. It was over but the crescendo was just about to begin.</p>
+<p>"I'm hungry, are you hungry?" Ravea asked.</p>
+<p>"Uhm, not really, I'm still pretty nervous." Jerome replied.</p>
+<p>Ravea sat up, "Don't worry, once you eat you'll get yourself." She let go of his hand and went to get food for him.</p>
+<p>There was a bountiful amount of foodstuffs to choose from; yam, plantain, cassava, cocoa, potatoes, onions, pepper, vegetables, carrots, pear, banana, apples, oranges etc. No expense was spared for the marriage. Regardless, Ravea had neither the time nor the strength to cook, she was on a mission, so she settled for the remnants from the wedding. There was little of it so after dishing a fairly large quantity of vegetable soup into a plate, she took out the bottle and went to work immediately. She added one pinch, then two, then the third. "There's no such thing as too much fun", she thought to herself.</p>
+<p>Just then, "Ravea! Are you done?" Jerome called from inside the room.</p>
+<p>Startled by the sudden noise, Ravea dumped the entire content of the bottle into the soup. She quickly threw away the bottle and tried to scoop out some of the powder but the soup was quick to accept the upgrade.</p>
+<p>"No no no no no no no!!" She began to panic.</p>
+<p>"Ravea are you okay?" Jerome asked.</p>
+<p>She didn't notice when he walked up to her.</p>
+<p>"I heard something fall down." He looked around to find out what it was, but he saw nothing. "Are you okay?" He asked again.</p>
+<p>"Yes, yes I am." She replied hastily.</p>
+<p>He looked at her curiously, "Well alright, if you say so. Although, I thought I heard you say no repeatedly, like some sort of chant."</p>
+<p>"Uhm, no, I mean yes, it's just-", she took a deep breath as she tried to buy time to think of a lie. She looked at the food, "I don't think the food will be enough for both of us."</p>
+<p>"Oh, that's no problem, I'm not that hungry so you can have it." Jerome replied open-mindedly then rubbed her back.</p>
+<p>"What? No, What sort of wife would I be to eat when my husband hasn't eaten?" She needed him to eat the food, by any means necessary.</p>
+<p>"Are you sure you're alright? You should probably take the dress off, I actually thought it looked a bit tight on you."</p>
+<p>"I'm being serious."</p>
+<p>"Okay, why don't we share it? We'll eat together." He then picked up the soup and two wraps of fufu then placed them on a tray. He then carried it in one hand and held Ravea with the other before pulling her into the room.</p>
+<p>"I wonder how many pinches are in there", Ravea thought to herself as she watched Jerome unwrap the fufu before dipping it into the soup. Her heart felt like it left her body when he eventually swallowed it. "How is it?" She asked.</p>
+<p>"Pretty good, but it does have a weird aftertaste though. Here", he tried feeding her some but she jerked backwards. "What is it?" He asked, but she said nothing.</p>
+<p>Ravea was fighting a war of confusion in her head. She didn't know what to do at that point, and whatever she did, it'll probably be useless as Jerome had already eaten a fair share of the food. So she decided to conform to the situation and just go with the flow, "If we perish, we perish", She thought to herself then took a bite.</p>
+<p>5 minutes later, they were done and signs of the aphrodisiac working were beginning to show. Ravea's cheeks glowed bright pink as the candle light hit the corners of her face while Jerome's trousers grew a mighty fine bulge.</p>
+<p>"Oh my goodness, this is worse than I expected", Ravea said while breathing heavily.</p>
+<p>"What is?" Jerome asked immediately. He was using a pillow to push down the bulge.</p>
+<p>"I'm so sorry." Ravea said then untied her gown. "Oh I feel so hot."</p>
+<p>"Sorry for what?"</p>
+<p>"In an attempt to help with your nervousness, I borrowed an aphrodisiac from my mother." She fanned herself with her hand.</p>
+<p>He looked at the empty plates and instantly understood. "Wait, you mean y-you put. You mean there was an aphrodisiac in that food?"</p>
+<p>"Yes."</p>
+<p>"Oh goodness. Okay, no need to panic, there are different types of aphrodisiacs and they all have different potency levels", he explained to her, "White is the least potent, it lasts about an hour and a half. Was it white?"</p>
+<p>"MmMm", she shook her head.</p>
+<p>"Okay okay, well whatever it was, provided it's not brown we're all good, was it brown?"</p>
+<p>She shook her head again.</p>
+<p>"Phew, good good. So wha-what color was it?"</p>
+<p>"It was... Black", she answered meekly.</p>
+<p>Jerome jolted up, "Black?! Black?!! Where the hell did you get a black aphrodisiac from?!!"</p>
+<p>"From my mother." She was on the verge of tears, her womb felt like it was about to burn itself inside out. "Is it bad?"</p>
+<p>"Black aphrodisiacs are illegal!" Jerome replied immediately.</p>
+<p>"What? How long does it last?"</p>
+<p>"5 days!" He put his hands on his head, "It lasts 5 days!"</p>
+<p>For a second, the sensible part of Ravea made her feel discomforted at the thought of being on heat constantly for 5 whole days, but the lust encroached into her mind and she lost all sense of reasoning and pounced on Jerome. "Then you have 5 days to actually get me pregnant."</p>
+<p>After everything, the walls were most probably thanking the gods that they had ears and not eyes.</p>
+<p>2 months later, as Ravea sat and thought about that day, she wondered how she wasn't pregnant with triplets, but who knows.</p>
+  </div>
+  <a class="back" href="#writing">Back to portfolio</a>
+</section>
+<section class="reader" id="read-article" hidden>
+  <a class="back" href="#writing">Back to portfolio</a>
+  <span class="kind">Article</span>
+  <h2>Walking for rewards with Sweatcoin</h2>
+  <div class="text">
+<p>Do you walk a lot?</p>
+<p>If you don't, are you willing to walk for a reward?</p>
+<p>Whatever your answer is doesn't matter, if you're still reading this, let me introduce you to Sweatcoin.</p>
+<p>Sweatcoin is a step-counter app that tracks your daily steps and swaps them for sweatcoins. These sweatcoins or SWC can be then exchanged for discount items and other perks that can be purchased.</p>
+<p>Simply put, they reward you for walking. For every 1000 steps you take everyday, you get 0.95 SWC.</p>
+<p>You might probably be thinking that this is too good to be true, and in a way it is. Sweatcoin DOES NOT give you cash-in-hand, you are only able to exchange your SWC within the app.</p>
+<p>Let me explain, Sweatcoin has a marketplace of its own where you can spend your SWC on offers, purchase products at discounted prices and much more. It even has an auction where you can bid for much more valuable items such as electronics, home appliances, gift cards, etc.</p>
+<p>All that for just walking, something you effortlessly do everyday.</p>
+<p>And if that's not enough, they are about to launch their own cryptocurrency, SWEAT, where your SWC balance will be turned into SWEAT. But act fast as SWEAT is launching in 3 days. Once it does, earning SWEAT will slowly become difficult.</p>
+<p>If you're interested, click the link below to download the app and get started: <a href="https://sweatco.in/i/kevin0001" rel="noopener">https://sweatco.in/i/kevin0001</a></p>
+<p>NOTE: Sweatcoin is a health app before anything else. It's not an update to make quick money but rather, a motivator to exercise in such a simple way as walking.</p>
+<p>Thanks for reading.😊</p>
+  </div>
+  <a class="back" href="#writing">Back to portfolio</a>
+</section>
+<section class="reader" id="read-story" hidden>
+  <a class="back" href="#writing">Back to portfolio</a>
+  <span class="kind">Short story</span>
+  <h2>Der Verlorene Engel</h2>
+  <div class="text">
+<p>The war was moving fast.</p>
+<p>Everyday the line receded on the German front.</p>
+<p>Tensions rose.</p>
+<p>People knew what was coming, what was happening, yet they dared not talk about it. Not in the open. Instead, they acted. They distracted themselves from the claustrophobic truth.</p>
+<p>Alcohol, sex, drugs, religion.</p>
+<p>They were all tools for that. And people paid generously for those tools, especially the people most at risk of being crushed by the truth.</p>
+<p>Der Verlorene Engel–The Lost Angel, sold its illusions well. Smoke, lace, liquor, and a girl with haunted eyes. They called her, "Anna!"</p>
+<p>Arranging her hair, she hurried out of the room. "Yes, Otto."</p>
+<p>"Greta's busy, mind serving these drinks to the man over there?" He pointed at a surprising visitor.</p>
+<p>"A french," she gasped lightly.</p>
+<p>"Zwangsarbeiter–Forced Laborer," he said, pouring out more drinks.</p>
+<p>She picked up the tray. Otto held her.</p>
+<p>"By the way Anna, I'm going to need to increase the protection fee." He scratched his neck. "The Gestapo are becoming too overactive."</p>
+<p>"I understand Otto. Thank you," she left.</p>
+<p>She walked to the table, smiled and gently dropped the tray. Turning to leave, she heard her name softly.</p>
+<p>"Anna, right?" The Frenchman said.</p>
+<p>"Ja–Yes." She turned. "Guten Abend."</p>
+<p>"Good Evening," he replied. "Uhm, I was told that you could be of service to me?"</p>
+<p>She hesitated. Her eyes darted towards the door and back. "Ja. Shall I take this up to a room then?"</p>
+<p>He smiled. "Yes, please."</p>
+<p>"Follow me." She led him up to a room and shut the door behind her. Everyone in the bar watched with mild surprise.</p>
+<p>"So how do you want–" Anna was cut short. The Frenchman pressed his lips against hers. She bit it, drawing blood.</p>
+<p>"Ow! You bitch!" He pushed her aside.</p>
+<p>"I'll service you, but I won't let you treat me like some puppet," she said, already taking off her dress.</p>
+<p>The Frenchman watched in awe. Her thick black hair came loose and flowed down her body. Her breasts, like large peaches. He hadn't seen those in years. Her hips swayed as she walked towards him.</p>
+<p>"Now, you can touch me."</p>
+<p>He nodded.</p>
+<p>A quarter hour later, they were done.</p>
+<p>"I'm Pier–"</p>
+<p>"I don't want to know." She packed her hair.</p>
+<p>He reached for his trouser's pockets. Rummaging through, he grabbed a bunch of coins and gave her almost everything. She shook her head. "I don't need that much."</p>
+<p>"No no, I want you to have it." He nodded.</p>
+<p>She took it. "Thank you."</p>
+<p>As they both left the room, the door downstairs opened. Silence fell.</p>
+<p>“Heil Hitler, Herr Sturmbannführer!”</p>
+<p>Anna didn’t need to look. She already felt it— The stillness. The fear.</p>
+<p>Erik's eyes found hers. She froze.</p>
+<p>Ignoring the men downstairs, he marched up. Quick and Forceful. Halting in front of the Frenchman, he placed his hand by his side.</p>
+<p>The Frenchman was confused. "Heil–" BANG!! Blood splattered.</p>
+<p>On the walls. On the floor. On Anna.</p>
+<p>He fell to the floor with a loud bang. A pool of blood flowing out from a hole in his head.</p>
+<p>His gun still smoking, the Sturmbannführer spat on him, "Schweinehund–Bastard."</p>
+<p>Still shaken, Anna grabbed him by the wrist and led him into a room.</p>
+<p>The entire bar was silent.</p>
+<p>"Erik!" Anna said in an exclaimed whisper.</p>
+<p>Unfazed, he sat on the bed. Then he immediately got up. He looked at the bed, disgusted. "I should've let the Gestapo handle him."</p>
+<p>"Erik, you can't keep doing this."</p>
+<p>"Doing what?" He feigned ignorance.</p>
+<p>"Killing people!"</p>
+<p>He chuckled. "Anna, you forget we're at war. That's not possible."</p>
+<p>She groaned in disappointment. "I meant for me! You can't keep killing people for sleeping with me. It's my job."</p>
+<p>"I don't like your job."</p>
+<p>"I need my job," she sat beside him. "For my safety." He gnashed his teeth. She was right. He sat back down, then his head fell. "I was angry. Jealous."</p>
+<p>"I know. But it's you I love." She held his cheek. He moaned. "Do you really have to keep doing this? What if he'd seen your star of David? Or heard you saying the Shema Yisreal while you slept?"</p>
+<p>He held her hand. "You have to understand. If I hadn't loved you, that would be you outside, with a bullet in your head. You have to be careful."</p>
+<p>"And I am. I promise, I am." She placed his head on her lap. "Nothing's going to happen to me."</p>
+<p>Morning, the next day.</p>
+<p>A hen crowed in the distance, but it was quickly subdued by the sound of an exploding shell faraway. Anna awoke instead to the sound of a child crying outside.</p>
+<p>Sunlight and ash sipped in from the windows and on to her face.</p>
+<p>She got up and prepared for the day.</p>
+<p>Sitting by a broken mirror, she applied what little make up she could.</p>
+<p>Greta walked in.</p>
+<p>"I haven't seen you since yesterday," Turning, Anna said to her.</p>
+<p>"I was busy. Working." She sat on the bed and tugged on her leggings softly. It was torn. "I doubt you remember what that's like."</p>
+<p>Anna kept silent. She stared at her self in the mirror. Her cheeks were soft pink. Her lips, a deep red. "What's the point?" She wondered.</p>
+<p>The door bell rang downstairs. Someone walked in.</p>
+<p>Greta rushed out to meet them. "I'll be with you shortly!"</p>
+<p>"Oh no, don't worry," they said, immediately. "I heard Anna's back on the menu."</p>
+<p>Greta fell silent. She returned to the room and sat back down. She tugged at the leggings again. But they wouldn't budge. So she tore it.</p>
+<p>Anna was startled, but she didn't say anything yet. The silence grew. A shell exploded again, breaking the silence.</p>
+<p>"You can have one of min–"</p>
+<p>"It's obvious I don't need it." She pulled on the leggings, taking off what was left of it. "They might as well name this place 'Anna, de Engel'"</p>
+<p>Anna dropped the leggings on the bed and left.</p>
+<p>She glanced downstairs, then at the bar. Otto wasn't around. Albeit, the customer had been served whiskey.</p>
+<p>"Hey, Anna! Another glass please. It's freaking cold this morning."</p>
+<p>"Alright!" She hurried downstairs and grabbed a bottle of whiskey.</p>
+<p>She instinctively glanced at the door. The man noticed and glanced as well.</p>
+<p>"Am I safe?" He asked.</p>
+<p>"Oh! Yes of course." She stopped pouring. "It's just habit."</p>
+<p>"Hm." He downed the whiskey in one gulp. "You look stunning but, Otto told me what happened yesterday." He looked upstairs. "Tell Greta to come down will you?" Anna shrugged. A thin smile and slight nod.</p>
+<p>She dropped the whiskey and went back up.</p>
+<p>On her way, the door downstairs opened.</p>
+<p>She looked, Otto was back.</p>
+<p>"Hey Anna!" He called immediately he saw her. "Can I talk to you for a minute?"</p>
+<p>"Oh, alright."</p>
+<p>They met at the stairs.</p>
+<p>"The price has gone up again." He couldn't look her in the eye.</p>
+<p>"Huh? What do you mean?"</p>
+<p>He kept silent. She realized.</p>
+<p>"How? I thought you already increased it yesterday?" He moaned. "You say it like I'm the one increasing it. There're a bunch of people I have to pay for information and silence. If their price increases, mine does too."</p>
+<p>"How much?"</p>
+<p>He sighed. "Double."</p>
+<p>"Otto! I can't afford th–" She barely finished the sentence when the air cracked.</p>
+<p>A shriek overhead. Then a thunderclap. The Flak guns were firing again.</p>
+<p>It muted her.</p>
+<p>"I'm sorry," he patted her shoulder.</p>
+<p class="brk">• • •</p>
+<p>Time crawled through the day. Dark clouds and ash imitated an endless dusk. It reflected on the people, yet still they carried on.</p>
+<p>Anna sat by the bar. She watched Greta take in her fifth customer for the day. The man, a low ranking soldier she had serviced before, winked at her. Greta saw. Glancing at Anna, her eyes sliced through the air. She sighed.</p>
+<p>Suddenly the door opened.</p>
+<p>She heard the hail and her head sprang up.</p>
+<p>Erik walked towards her. An obvious urgency to his steps.</p>
+<p>Without a word, he pulled her into an empty room and shut the door. It didn't lock properly.</p>
+<p>"You need to leave," he said.</p>
+<p>"Lea–"</p>
+<p>"I've arranged for you to be smuggled out of Germany." He pulled out a bunch of documents from his coat. "This is your new identity. New name, birth certificate. The likes."</p>
+<p>He showed her a paper, "Memorize everything here. If you lose those documents, which you probably will, the information here is everything you'll need. When I tell you, go to this address, there'll be–"</p>
+<p>She slapped his hand. "Will you calm down and tell me what exactly is the meaning of all this?"</p>
+<p>"Anna, I don't have time. I need to leave. The route you'll be taking, I need to make sure it's secure."</p>
+<p>"What route? Leave to where?"</p>
+<p>"It's better you don't know for now. That information might implicate you." He held up the paper, "This is all the everything you're going to need. Memorize it."</p>
+<p>"You're not listening to me. I'm not going anywhere. Not unless you tell me what the hell is going on."</p>
+<p>"Anna, we don't have time for that."</p>
+<p>She turned. "Then I'm leaving."</p>
+<p>"What?" He grabbed and pulled her. "Do you understand what's at stake here?!"</p>
+<p>She flinched. His eyes were on fire. But they quickly simmered down. He let go off her.</p>
+<p>Heaving a deep breath, "I'm sorry." He took a step back. She hesitated. "What's wrong?"</p>
+<p>He clenched the bridge of his nose, then released it.</p>
+<p>"The allied forces are closing in." He sat down. His hand clenched. His eyes gazing at them. "This war, we may not win it. No, we won't. We can't. Not anymore. The leaders, they know this. They've let the Gestapo off the leash." He looked at her. "You're not safe here Anna." Anna stared at him. He looked… defeated.</p>
+<p>"Otto still has connections. He even increased the protection fee this morning. I know it's difficult but they're still working."</p>
+<p>"Let me guess, they doubled it? Tripled it?"</p>
+<p>Her mouth fell.</p>
+<p>"That's not their protection fee Anna, that's their escape loan. And you're paying for it." He stood up. "Everyone's still calm but the people that know what's happening, they're scrambling for safety."</p>
+<p>She glanced at the documents he'd dropped on the bed beside him.</p>
+<p>He glanced at it too, then sighed. "You're not safe here anymore. Not even Otto can protect you. Neither can I if you stay here any longer."</p>
+<p>Dumbfounded, she sat on the cold floor. "Where do I go?"</p>
+<p>He moved and sat in front of her. "England."</p>
+<p>"What?!!" She shouted.</p>
+<p>He covered her mouth. "Keep it down."</p>
+<p>She pried it off. "How?"</p>
+<p>"That's what I've been trying to tell you. Just memorize and follow the instructions on the paper and you'll be fine." He held it out. She took it and glanced through.</p>
+<p>"It's pretty vague."</p>
+<p>"Yes, for your safety."</p>
+<p>"Hm. When do I leave?"</p>
+<p>"I'll let you know."</p>
+<p>"Alright." She flinched. "What about you?"</p>
+<p>"I'll meet you there after a couple weeks. I need to get some things done before leaving." He reached for her hand.</p>
+<p>"You said you were going somewhere."</p>
+<p>He nodded. "Someone was supposed to ensure that the route you'd be taking would be safe. I got word this morning that he died in the air raid. It'll take time to find another person so I'm going myself."</p>
+<p>"Is that safe?"</p>
+<p>He paused. "I have a better chance than he did."</p>
+<p>"Oh God." She sobbed.</p>
+<p>"God has left us Anna."</p>
+<p>"No, no he hasn't." Ruffling through her hair. She pulled out her star of David. It glistened with a dying light. "He is always with us."</p>
+<p>"He is not with me. My sins are too great"</p>
+<p>She squeezed his hand. "He'll forgive. He loves you just like I do."</p>
+<p>Erik rolled his eyes subtly.</p>
+<p>Anna said nothing. Her eyes shimmered with quiet defiance. She bowed her head. “Shema Yisrael, Adonai Eloheinu, Adonai Echad...” she whispered.</p>
+<p>Erik stiffened. “Anna–”</p>
+<p>“Baruch shem kevod malchuto l’olam va’ed.”</p>
+<p>With confident whispers, the words drifted into the silence, soft yet unshakable. Her voice wasn’t proud, nor loud. It trembled with the weight of memory. With faith. Outside the room, a floorboard creaked. Someone had been walking past. But the sound paused. Then faded.</p>
+<p>“Please,” Erik whispered, quickly glancing at the door, then back at her. “Not here. Not now.”</p>
+<p>She opened her eyes. Her hand slowly let go of the star, and it disappeared once more into her thick hair.</p>
+<p>A silence fell between them.</p>
+<p>Then, with a breath that barely qualified as a smile, she looked at him. There was something old in her eyes. Something kind, like a hand gently laid over a wound.</p>
+<p>“If you won't let me pray for you, then let me give you a name,” she said.</p>
+<p>He blinked. “A name?”</p>
+<p>“If you're going to stand before God again,” she said, “you’ll need something He’ll recognize.”</p>
+<p>Building up to a refusal, he shook his head slowly. But a steadiness in the way she looked at him prevented him from doing so.</p>
+<p>She smiled. “Ezra.”</p>
+<p>Then kissed his knuckles.</p>
+<p>He looked at her tentatively. Unsure.</p>
+<p>"Ezra."</p>
+<p class="brk">• • •</p>
+<p>They spent the entire afternoon in each other’s arms. And later that night, they lay together.</p>
+<p>Beneath smoke-stained moonlight spilling through Anna’s window.</p>
+<p>Her head rested on his chest. His heartbeat echoed through her like ripples. Like waves. Like something alive and terrified to stop.</p>
+<p>The warmth between them outmatched the cold. So unfamiliar it frightened them. Not for what it was. But for what it could be lost to.</p>
+<p>Only then, did the weight of what lay ahead on his journey crash over Erik.</p>
+<p>Fear swelled. It grew. And grew. Until his heart thundered like waves building into a storm.</p>
+<p>“Ezra,” she murmured.</p>
+<p>His eyes snapped to her. Had she felt it? His doubt, his fear?</p>
+<p>But she was asleep.</p>
+<p>A shiver ran down his spine.</p>
+<p>"What faith," he thought.</p>
+<p>A tear slid down his cheek.</p>
+<p>The storm passed. And with it, Erik.</p>
+<p>Ezra slept soundly. As if for the first time in his life. The next day, and the days after that, were like a reset button.</p>
+<p>It overwhelmed Anna with a new sense of dread.</p>
+<p>But the world around her couldn't care less.</p>
+<p>One afternoon, a couple days after Ezra had travelled, Anna was at the back of the inn cleaning.</p>
+<p>She'd quickly glance at the paper Ezra had given to her. Fold it away. Then try remembering its contents.</p>
+<p>Suddenly, she heard a hail from inside. Familiar. Heart wrenching. Relieving.</p>
+<p>She rushed in immediately.</p>
+<p>The man, she couldn't see his face. He held Greta. Possessively. Passionately.</p>
+<p>She was full of smiles.</p>
+<p>He lifted her up and slowly climbed the stairs.</p>
+<p>"It's not him," she realized.</p>
+<p>But they were the same rank. Same power. Her heart sunk. She reached for the back door but stopped when she heard her name.</p>
+<p>"Anna! Over here!" A customer called. "Another one, please." He raised his glass.</p>
+<p>She grabbed a bottle of whiskey and went to him.</p>
+<p>Upstairs, she overheard pieces of Greta's conversation with the Sturmbannführer.</p>
+<p>"... diamond necklace, a castle in France. Whatever you want."</p>
+<p>"I want you."</p>
+<p>"And everything I can give to you."</p>
+<p>Greta chuckled softly, possessively, until the man’s gaze shifted.</p>
+<p>"Fräulein– Miss. Bring another glass up," he called. Anna looked up, startled. He stared at her. Let the sight of her linger like a slow poison. Then, with sudden disinterest, he dropped Greta from his arms.</p>
+<p>“Do you work here?”</p>
+<p>She glanced at the whiskey bottle in her hand and chuckled. "Ja."</p>
+<p>He smiled dryly. "No, that's not what I meant." His hand travelled firmly down Greta's back.</p>
+<p>"Oh." Anna looked at Greta. She was seething. Her face was red. Veins visibly throbbing on her forehead. Her clenched fist drew blood from her palm.</p>
+<p>Her smile, so forced it looked like her face would tear from the tension.</p>
+<p>"It doesn't matter," the Sturmbannführer said. "Get up here. Now." He walked into a room alone, leaving Greta behind.</p>
+<p>"Greta, I'm sorry. I really am. I didn't mean for this to happen." Anna apologized.</p>
+<p>Greta just stood still. Like if she moved, even an inch, the world would end. Her world would end.</p>
+<p>Anna walked past her with a bottle of whiskey and into the room.</p>
+<p>Standing outside, she heard the bottle of whiskey open. Heard the bed squeak. First slowly, then quickly. Then the sound that birthed a demon in her. A soft moan.</p>
+<p>"You entitled little bitch!" She thought. "It's not enough that one Major likes you. You want all of them!" Her breath labored. "After I kept your secret!" Her mind drifted.</p>
+<p>A few days before. She'd finished with a customer and was heading downstairs. Then she heard it. The forbidden cry of a Jew– the Shema Yisreal, recited by Anna.</p>
+<p>Confusion. Anger. Hate.</p>
+<p>She wanted to find out more. But her protector was there. Her mouth went dry.</p>
+<p>He knew! And he still loved her!</p>
+<p>Jealousy.</p>
+<p>Again, Anna moaned.</p>
+<p>"I WILL FUCKING RUIN YOU!"</p>
+<p>Her thoughts echoed.</p>
+<p>She stormed downstairs.</p>
+<p>Soot trailed behind her like smoke from a burning fuse as she marched out of the inn.</p>
+<p>Otto returned a while later to find Anna drinking. He sat with her. "That's a first."</p>
+<p>She poured him some. "What is?"</p>
+<p>"You. Drinking. Voluntarily." He took the glass.</p>
+<p>She froze.</p>
+<p>"There's nothing wrong with it. You work in an inn, it's a given that you'll drink." He took a large sip.</p>
+<p>She shut her eyes. "But that's not who I am. This isn't who I am."</p>
+<p>With a mild grimace, "Of course it is."</p>
+<p>"It's not."</p>
+<p>"It is. If it weren’t, you wouldn’t have survived this long."</p>
+<p>"Still, It's not."</p>
+<p>"It is!" He leaned closer. "The girl that you're talking about, that's Leah Abramowitz. And she's dead. She died years ago when I pulled her out of that heap of dead bodies. Covered in blood. Barely able to stand. Her will to live, smoothered by the weight of those corpses. But you, you are Anna Weiss. And Anna wanted to live. Anna promised me she would do anything to live. Anna has been living. So, it is who you are."</p>
+<p>Anna trembled. She bit her lip. "Leah wants to live again."</p>
+<p>"This isn't the time to be saying all this Anna. The walls have ears." He grabbed the bottle. "Go fix, whatever it is that's bothering you. Drinking won't solve it." He went behind the bar. "Have you seen Greta?"</p>
+<p>Her heart dropped. She shook her head. "I've been looking all over for her." She looked around. The inn was empty. "I'll go look outside for her."</p>
+<p>"Is that safe?"</p>
+<p>"I'm not going far. I'll just be in the front."</p>
+<p>The air reeked of smoke.</p>
+<p>It was late in the afternoon, yet she could've sworn the sun was about setting.</p>
+<p>The sky. Grey, gloomy, choking.</p>
+<p>It roared.</p>
+<p>She looked up. Lightning.</p>
+<p>It didn't take long for rain to follow.</p>
+<p>People raced to find shelter. So did she.</p>
+<p>The already muddy ground didn't do a good job of absorbing the water.</p>
+<p>They pooled into puddles. Almost black from all the oil and ash on the ground.</p>
+<p>A car drove by, splashing some of it on her.</p>
+<p>She winced, then cursed.</p>
+<p>The car stopped.</p>
+<p>Her breath seized.</p>
+<p>Greta jumped down from the back.</p>
+<p>Relief came back to her, but– Four men. They came down with her.</p>
+<p>They were dressed like ordinary civilians, but, something about their gait. The firmness in their eyes. It was all too familiar. Not to Anna; Leah.</p>
+<p>The Gestapo.</p>
+<p>Electricity shot through her body. Her heart pounded. Without thinking, she ran.</p>
+<p>"Bang!" Another roar.</p>
+<p>She suddenly lost strength in her left leg.</p>
+<p>Half a second later, her face planted into the mud. She looked back.</p>
+<p>Two men were walking towards her. One of them pocketed his gun.</p>
+<p>The other two stormed into the inn. They dragged Otto out soon after.</p>
+<p>One man stood above her. Then pointed.</p>
+<p>"This is the swine?" He asked.</p>
+<p>Anna heard nothing.</p>
+<p>"Speak!"</p>
+<p>"Y-Yes, that's her," Greta stuttered.</p>
+<p>He looked at Anna. Sheer disgust on his face.</p>
+<p>"Verdammt!– Shit!" He kicked her. "Right under our fucking noses."</p>
+<p>Anna screamed.</p>
+<p>"If you weren't so pretty I'd have aimed at your head." He looked at Greta. "You said she was your colleague? How did you not know until now?"</p>
+<p>"I-I only just f-found out."</p>
+<p>His gaze shifted to Otto. "And him?"</p>
+<p>"I don't know." Her legs were shaking.</p>
+<p>The man looked at one of the other men. He nodded. Unsheathing his gun, "Bang! Bang!"</p>
+<p>Otto slumped to the ground.</p>
+<p>"Aaahh!!" Greta lost it. Her legs gave in and she fell.</p>
+<p>"You mean to tell me, that all while you worked here, you didn't notice anything suspicious?" He stared unsympathetically at Greta.</p>
+<p>"Yes! I mean, No! I didn't!" Greta scuffled backwards on the muddy ground.</p>
+<p>"Then you're even more of a threat than they are. The fatherland has no use for incompetent fools like you." He pointed his gun, but he didn't shoot. "Bang!" The man behind her did.</p>
+<p>The puddle next to her turned murky red.</p>
+<p>"Hey," one of the men squatted beside Anna. "Aren't you Erik's pet?" He peered closer. "You are."</p>
+<p>"Erik?" The other man looked at her. "Erik fucked a swine?"</p>
+<p>"He probably wasn't aware."</p>
+<p>"Then he is also an incompetent fool." He marched towards the car. "Get her in and stop the bleeding." Anna struggled to keep her eyes open.</p>
+<p>Her eyelids. They felt like anvils.</p>
+<p>She feared for what would happen if she shut them. But as every ounce of strength left her body, she gave up.</p>
+<p>When next she awoke, she was welcomed by a world of pain.</p>
+<p>From her leg, it resonated through her entire body. She didn’t open her eyes.</p>
+<p>The cold found her first. It clung to her skin like a feverish hand.</p>
+<p>Then the smell. Mildew, piss, rusted iron.</p>
+<p>Then the voices. Far off. German.</p>
+<p>One closer. Right next to her.</p>
+<p>“She’s awake.”</p>
+<p>Hands dragged her up. Her scream caught in her throat. Her leg was useless.</p>
+<p>“Don’t let her bleed out. Orders are to keep this one alive.”</p>
+<p>The next hour was a blur of cloth, fire, and pain. They cauterized the wound.</p>
+<p>She blacked out again.</p>
+<p>She came to in a dim-lit cell. A bucket in the corner. No windows.</p>
+<p>A metal door opened. A woman entered. White coat.</p>
+<p>Clipboard.</p>
+<p>She didn’t look at Anna when she spoke.</p>
+<p>“Name?”</p>
+<p>No answer.</p>
+<p>The woman sighed. “We know who you are. The Jew whore. Erik’s girl.”</p>
+<p>Still nothing.</p>
+<p>A slap.</p>
+<p>“Name.”</p>
+<p>“Ann–Leah,” she breathed. “Leah Abramowitz.”</p>
+<p>The woman wrote it down, then tore the page out.</p>
+<p>“Congratulations,” she said. “Your lover cost us three officers, two transport lines, and an entire informant network.”</p>
+<p>She dropped the paper on Leah’s chest.</p>
+<p>“They hung him last night. He screamed your name.” Silence.</p>
+<p>The woman waited. For a sob, a scream, a plea.</p>
+<p>Nothing.</p>
+<p>She left.</p>
+<p>The door slammed shut.</p>
+<p>Leah stared at the ceiling. She didn’t blink. Didn’t cry. Her heart didn’t break.</p>
+<p>It stopped.</p>
+<p>Time passed. She couldn’t tell how long. Hours, maybe. Days.</p>
+<p>No food. No warmth. Just the bucket.</p>
+<p>No one came.</p>
+<p>Not until the boots returned. Four men. No words.</p>
+<p>They pulled her up. Chains clinked at her wrists.</p>
+<p>Outside, the light stabbed her eyes. The sun was barely even out.</p>
+<p>Even the grayest day was blinding now.</p>
+<p>The world looked drained. Bleached and bitter. Ash still floated in the wind. Smoke in the distance, rising like a memory that wouldn’t burn away.</p>
+<p>A row of trucks waited.</p>
+<p>They threw her into the back of one. Slammed the doors.</p>
+<p>She wasn’t alone. There were a dozen others. Silent. Thin. Faces hollowed out by starvation and grief.</p>
+<p>No one asked questions. They just sat. Breathing.</p>
+<p>The engine started.</p>
+<p>They drove for hours. Maybe more. Forests blurred by, but she didn’t look out.</p>
+<p>She just stared deeply, at a darkness in the corner of the truck.</p>
+<p>They stopped.</p>
+<p>A man shouted from the front. Then another.</p>
+<p>Minutes passed. Still no movement.</p>
+<p>Then, the door opened. Cold air. Gun barrels. More shouting.</p>
+<p>“We’re rerouting,” someone barked. “The track’s blocked. Orders from Berlin.”</p>
+<p>A guard climbed in. Looked around. “Auschwitz. Wir bringen sie nach Auschwitz.”</p>
+<p>The name struck like a whip.</p>
+<p>Silence rippled through the truck.</p>
+<p>Everyone knew of Auschwitz.</p>
+<p>Death and suffering embodied by a single location. Even the dead-looking stirred.</p>
+<p>But, Leah didn’t react.</p>
+<p>Her body had learned the truth long ago.</p>
+<p>Hell never stopped changing names.</p>
+<p>The truck slowed.</p>
+<p>The forest had thinned. The sky, a heavy bruise of dusk. Barbed wire fences rose in the distance, crooked and endless.</p>
+<p>Beyond them, towers.</p>
+<p>Chimneys.</p>
+<p>Auschwitz.</p>
+<p>But something was wrong.</p>
+<p>There were no barking dogs. No shouting. No marching. No movement at all.</p>
+<p>The truck stopped outside the main gate. A sign loomed overhead: Arbeit Macht Frei.</p>
+<p>The guards tensed. Whispers among them.</p>
+<p>One jumped down. Rifle ready. He jogged toward the checkpoint hut.</p>
+<p>Nothing.</p>
+<p>No one inside.</p>
+<p>Another joined him. Then another. Then all four.</p>
+<p>The prisoners waited.</p>
+<p>Someone beside Leah whispered, “Why’s it so quiet?” She didn’t answer. Just listened.</p>
+<p>The guards began shouting. Names, orders, curses. Still no reply.</p>
+<p>One fired his gun into the air.</p>
+<p>Silence answered.</p>
+<p>Then, distant shots.</p>
+<p>The guards stiffened. One of them ran back to the truck, yanked the doors open. “Out! All of you!”</p>
+<p>They stumbled down.</p>
+<p>Leah’s legs barely held.</p>
+<p>A guard grabbed a girl beside her and threw her forward. “Move!”</p>
+<p>Another prisoner tripped. The butt of a rifle cracked her back.</p>
+<p>The guards were panicking. Herding. Not controlling. A final shout came from the front. Then a gunshot. One of the guards dropped.</p>
+<p>The others turned. Confused.</p>
+<p>Then they ran.</p>
+<p>Away from the prisoners.</p>
+<p>More gunfire. Much closer now.</p>
+<p>The prisoners froze.</p>
+<p>Out of the woods, they came.</p>
+<p>Men in strange uniforms. Different accents. Helmets Leah didn’t recognize.</p>
+<p>One shouted in broken German, “Drop your weapons!” The guards tried to flee. One was shot in the leg. Another tackled.</p>
+<p>Within minutes, it was over.</p>
+<p>Leah stood still as the chaos settled.</p>
+<p>The new soldiers approached slowly, guns lowered.</p>
+<p>Eyes cautious.</p>
+<p>One of them raised his hands. “It’s okay. You’re safe.” A woman sobbed. Another collapsed.</p>
+<p>Leah did neither.</p>
+<p>She just looked up at the sky.</p>
+<p>It had started to snow.</p>
+<p class="brk">• • •</p>
+<p>Leah sat beside a makeshift stove, wrapped in a blanket that smelled like rust and firewood. It wasn’t hers. None of this was.</p>
+<p>All around her were faces. Some crying. Some staring. Some laughing with cracked voices that barely sounded human.</p>
+<p>And yet, not one of them looked free.</p>
+<p>Not really.</p>
+<p>A man offered her a tin cup. He called it soup. But it was mostly hot water and grease. She took it.</p>
+<p>But she didn’t drink.</p>
+<p>Her eyes wandered. Past the others, past the collapsing fences and the scorched guard towers, to the horizon. The sky was a dull, blistered pink.</p>
+<p>One of the soldiers approached. American, she guessed. His voice was too soft for a German.</p>
+<p>“Hey,” he knelt in front of her, “you need anything? Water? Medicine?”</p>
+<p>She blinked. That was all.</p>
+<p>He looked at her freshly bandaged leg and winced.</p>
+<p>“We’ll get you looked at again when we reach the Red Cross unit. Maybe a few hours. Hang in there, okay?” She nodded, faintly. Automatically.</p>
+<p>He gave her a quiet smile. “You’re safe now, Miss. You’re free.”</p>
+<p>Then he turned and left.</p>
+<p>She looked at the steam rising from her cup. It drifted into nothing.</p>
+<p>You’re free.</p>
+<p>The words echoed in her head, but they didn’t register. Or maybe they did, her body just didn’t believe them. They still flinched when boots got too close.</p>
+<p>Still tightened at the scent of fire.</p>
+<p>She set the cup down.</p>
+<p>Looked at her hands.</p>
+<p>They were shaking.</p>
+<p>She didn’t feel free. She'd lost too much to be free. She felt… hollow.</p>
+<p class="brk">• • •</p>
+<p>Three weeks later.</p>
+<p>She sat at the back of a taxi and stared outside.</p>
+<p>The sky was gray. But, this wasn't like home.</p>
+<p>The gray didn't choke her. It didn't make her eyes sting. It brought with it a cool breeze and scents of rain. Just below it, endless rows of tall stone buildings. Some of them stained black and yellow from acid rain. The roads were wide. Bustling. Clean, for the most part. At least there weren't dead bodies laying around.</p>
+<p>The people were relatively nice.</p>
+<p>"We're here, miss." The driver said.</p>
+<p>Leah looked forward. Then to the side. They stopped by a one storey building made from cinder blocks. "Oh." She climbed down and slowly walked towards it.</p>
+<p>"Miss?!" The driver called. She looked back. "My money."</p>
+<p>"Oh! I'm sorry. How much is it?"</p>
+<p>"£2," he answered.</p>
+<p>She paid him and he zoomed off.</p>
+<p>There was someone waiting outside the house.</p>
+<p>A lady. Short. In a suit.</p>
+<p>She stretched out her hand.</p>
+<p>Leah hesitated, then realized.</p>
+<p>She shook her hand.</p>
+<p>"Hello." A cheerful voice. "Miss Voss?"</p>
+<p>Leah felt goosebumps envelope her. "Yes!" She replied eagerly.</p>
+<p>"I'm Priscilla. I work for Gerard. You guys spoke on the phone about the house and bank accounts."</p>
+<p>"Ah, yes. How is he?"</p>
+<p>"He's alright. His wife's about to pop one out so he sent me in his stead."</p>
+<p>"Oh! That's wonderful." She smiled. Then slowly stopped. "But, I thought we settled everything. Is there a problem?"</p>
+<p>"No no, there isn't. On the contrary actually." She took out an envelope from her bag. "Mr. Voss made us promise to give you this when, and only when, you made it to the house."</p>
+<p>Leah stared at it. Like she was trying really hard to confirm its existence. If it was a lie.</p>
+<p>She reached, slowly, and took it.</p>
+<p>It was real.</p>
+<p>"I'll be on my way then." Priscilla's voice sounded so distant.</p>
+<p>She nodded, "Alright. Thank you."</p>
+<p>Her eyes barely left the envelope.</p>
+<p>She opened it and found a letter.</p>
+<p>Her chest tightened.</p>
+<p>It read: Are you of lower humanity?</p>
+<p>I ask myself this everyday, and you answer me.</p>
+<p>Your kindness. Your love. Your being.</p>
+<p>It is of higher humanity.</p>
+<p>Higher than even I.</p>
+<p>For the things I have done, unspeakable things, to your people. Things I would've done to you.</p>
+<p>I am a monster. Subhuman.</p>
+<p>Yet you, with your magnificence, fragile and weak, saw in me something to love.</p>
+<p>Something I don't see myself. Something I want to see. And you are my only mirror.</p>
+<p>The only mirror I wish to look at.</p>
+<p>The only mirror that wishes to look at me.</p>
+<p>So, if you can stand the sight of this monster for the rest of time, would you do me the divine favor of marrying me? Leah Voss.</p>
+<p>Yours longing, Ezra Voss.</p>
+<p>She read the letter again.</p>
+<p>And again.</p>
+<p>Each time, slower.</p>
+<p>The words didn’t change.</p>
+<p>But her chest did.</p>
+<p>It ached.</p>
+<p>Then twisted.</p>
+<p>Then broke.</p>
+<p>Not like glass, but like soil cracking open under rain. She sat down on the front step.</p>
+<p>The breeze touched her cheeks. Or maybe that was him. Or maybe that was wishful thinking.</p>
+<p>She laughed. Quietly. Soft. The kind of sound that crumbles before it reaches the throat.</p>
+<p>Then the tears came.</p>
+<p>Hot. Relentless.</p>
+<p>She didn’t wipe them.</p>
+<p>She let them fall. Down her chin, into her lap, onto the letter.</p>
+<p>And for the first time in what felt like lifetimes… She sobbed.</p>
+<p>Not for the pain.</p>
+<p>Not for the war.</p>
+<p>Not even for Ezra.</p>
+<p>But because someone had loved her that much.</p>
+<p>And she had loved him back.</p>
+<p>Even now, she still did.</p>
+<p>Every part of her trembled. Not from fear, but from memory. From love.</p>
+<p>From everything they’d lost, and everything they’d had. When the sun broke through the clouds, she looked up. Let it kiss her tears.</p>
+<p>She was far from hollow now.</p>
+<p>She was full.</p>
+<p>Full to the brim.</p>
+<p>Leah had loved.</p>
+<p>And she had lived.</p>
+  </div>
+  <a class="back" href="#writing">Back to portfolio</a>
+</section>
+</main>
+<script>
+(function(){
+  function route(){
+    var id=location.hash.slice(1),el=id?document.getElementById(id):null,
+        isReader=el&&el.classList.contains('reader'),
+        p=document.getElementById('portfolio');
+    document.querySelectorAll('.reader').forEach(function(r){r.hidden=true});
+    if(isReader){p.hidden=true;el.hidden=false;window.scrollTo(0,0)}
+    else{p.hidden=false;if(el)el.scrollIntoView()}
+  }
+  window.addEventListener('hashchange',route);route();
+})();
+</script>
+<script>
+(function(){
+  var r=document.documentElement,b=document.getElementById('themeBtn'),t=null;
+  try{t=localStorage.getItem('theme')}catch(e){}
+  if(t==='light'||t==='dark')r.setAttribute('data-theme',t);
+  function cur(){return r.getAttribute('data-theme')||'dark'}
+  function label(){b.textContent=cur()==='dark'?'Light mode':'Dark mode'}
+  b.addEventListener('click',function(){
+    var n=cur()==='dark'?'light':'dark';
+    r.setAttribute('data-theme',n);
+    try{localStorage.setItem('theme',n)}catch(e){}
+    label();
+  });
+  label();
+})();
+</script>
+</body>
+</html>
